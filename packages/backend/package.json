@@ -43,6 +43,7 @@
     "@backstage/plugin-search-backend-node": "^1.3.17",
     "@backstage/plugin-signals-backend": "^0.3.10",
     "@backstage/plugin-techdocs-backend": "^2.1.2",
+    "@internal/backstage-plugin-auth-backend-module-wid-provider": "workspace:^",
     "app": "link:../app",
     "better-sqlite3": "^12.0.0",
     "node-gyp": "^10.0.0",

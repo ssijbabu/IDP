@@ -31,6 +31,17 @@ backend:
 auth:
   providers:
     guest: {}
+    # This ID matches the providerId: 'azure-federated' set in src/module.ts
+    azure-federated:
+      production:
+        # MANDATORY: Your Azure AD Directory (Tenant) ID
+        tenantId: ${AZURE_TENANT_ID}
+        # MANDATORY: The Application (client) ID
+        clientId: ${AZURE_CLIENT_ID}
+        # MANDATORY FOR WIF: The path where the platform mounts the JWT assertion
+        federatedTokenFile: ${AZURE_FEDERATED_TOKEN_FILE}
+        # OPTIONAL: Enables session refreshing
+        allowRefresh: true 
 
 catalog:
   # Overrides the default list locations from app-config.yaml as these contain example data.

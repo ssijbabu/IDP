@@ -29,6 +29,8 @@ backend.add(import('@backstage/plugin-auth-backend'));
 backend.add(import('@backstage/plugin-auth-backend-module-guest-provider'));
 // See https://backstage.io/docs/auth/guest/provider
 
+backend.add(import('@internal/backstage-plugin-auth-backend-module-wid-provider'))
+
 // catalog plugin
 backend.add(import('@backstage/plugin-catalog-backend'));
 backend.add(
