@@ -6,7 +6,7 @@ import {
 } from '@backstage/plugin-auth-node';
 import { azureFederatedAuthenticator } from './authenticator';
 import { azureSignInResolver } from './resolver';
-import { AzureUserProfile } from './types'; // <-- Import the type for the factory
+import { AzureUserProfile } from './types';
 
 
 export const authModuleWidProvider = createBackendModule({
@@ -20,7 +20,6 @@ export const authModuleWidProvider = createBackendModule({
       async init({ providers }) {
         providers.registerProvider({
           providerId: 'azure-federated',
-          // FIX: Pass the generic type <AzureUserProfile> to align the authenticator and resolver.
           factory: createOAuthProviderFactory<AzureUserProfile>({
             authenticator: azureFederatedAuthenticator,
             signInResolver: azureSignInResolver,
