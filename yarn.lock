@@ -1309,7 +1309,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@azure/identity@npm:^4.0.0, @azure/identity@npm:^4.13.0":
+"@azure/identity@npm:^4.0.0":
   version: 4.13.0
   resolution: "@azure/identity@npm:4.13.0"
   dependencies:
@@ -1347,10 +1347,28 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@azure/msal-common@npm:14.16.1":
+  version: 14.16.1
+  resolution: "@azure/msal-common@npm:14.16.1"
+  checksum: 10c0/10f7369cac5735204e190f8d92b8e5f2db66f20a99da55f2febd3b2ece56419c5dde0877dd9af492d8c35efa1b2952808cc18f34b47a8e9da9ef0497cdf3c7be
+  languageName: node
+  linkType: hard
+
 "@azure/msal-common@npm:15.13.2":
   version: 15.13.2
   resolution: "@azure/msal-common@npm:15.13.2"
   checksum: 10c0/706e9471c14b92ac4015a50ee3724dc459e4377572caba369ae5cefc225605165717af865290c2e245f225eae6104df220c44b7e24a5ebc116ac0a59ec254a64
+  languageName: node
+  linkType: hard
+
+"@azure/msal-node@npm:^2.1.1":
+  version: 2.16.3
+  resolution: "@azure/msal-node@npm:2.16.3"
+  dependencies:
+    "@azure/msal-common": "npm:14.16.1"
+    jsonwebtoken: "npm:^9.0.0"
+    uuid: "npm:^8.3.0"
+  checksum: 10c0/7fa1da0cb22bb1142b265ae075c1a8f3d3d1fe5705c13da5500431eacff9854435e43fe59f82db22459a8c2c91022454dafacdaedab568fd0670c972f32221f5
   languageName: node
   linkType: hard
 
@@ -5732,7 +5750,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@internal/backstage-plugin-auth-backend-module-wid-provider@workspace:plugins/auth-backend-module-wid-provider"
   dependencies:
-    "@azure/identity": "npm:^4.13.0"
+    "@azure/msal-node": "npm:^2.1.1"
     "@backstage/backend-plugin-api": "npm:^1.5.0"
     "@backstage/backend-test-utils": "npm:^1.10.0"
     "@backstage/cli": "npm:^0.34.5"
