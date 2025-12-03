@@ -70,7 +70,7 @@ const app = createApp({
             title: 'Azure AD',
             message: 'Sign in using Azure Active Directory',
             apiRef: azureFederatedAuthApiRef,
-          } as any,
+          },
         ]}
       />
     ),
